@@ -9,7 +9,14 @@
 </head>
 <body>
     <h1>Markdown Previewer</h1>
-    
+
+    <textarea id="editor"></textarea>
+    <div>
+        <p>Word Count: <span id="word-count"></span></p>
+        <p>Character Count: <span id="character-count"></span></p>
+    </div>
+    <div id="previewer"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="client/script.js"></script>
 </body>
