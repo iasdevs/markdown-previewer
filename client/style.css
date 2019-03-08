@@ -1,0 +1,19 @@
+.nav__item--main li a {
+    cursor: pointer;
+}
+
+.nav__item--sub, .display__count {
+    display: block;
+}
+
+.html-display {
+    font-family: initial;
+}
+
+.styled-html-display {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
