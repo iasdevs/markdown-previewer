@@ -8,14 +8,35 @@
     <title>Markdown Previewer</title>
 </head>
 <body>
-    <h1>Markdown Previewer</h1>
+    <header>
+        <h1>Markdown Previewer</h1>
+        <nav class="nav nav-menu">
+            <ul class="nav__item--main">
+                <li>
+                    <a class="item__preview-as">Preview As</a>
+                    <ul class="nav__item--sub hidden">
+                        <li><a id="html-set">HTML</a></li>
+                        <li><a id="styled-html-set">Styled HTML</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="item__settings" >Settings</a>
+                    <ul class="nav__item--sub hidden">
+                        <li>Autosave <input id="autosave-set" type="checkbox" /></li>
+                        <li>Character Count <input id="character-count-set" type="checkbox" /></li>
+                        <li>Word Count <input id="word-count-set" type="checkbox" /></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <textarea id="editor"></textarea>
-    <div>
-        <p>Word Count: <span id="word-count"></span></p>
-        <p>Character Count: <span id="character-count"></span></p>
+    <div class="display__count">
+        <p class="hidden">Character Count: <span id="character-count"></span></p>
+        <p class="hidden">Word Count: <span id="word-count"></span></p>
     </div>
-    <div id="previewer"></div>
+    <div class="display__previewer html-display" id="previewer"></div>
     <button id="save-session">Save Session</button>
     <button id="clear-session">Clear Session</button>
 
