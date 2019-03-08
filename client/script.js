@@ -66,7 +66,7 @@ document.getElementById('clear-session').addEventListener('mouseup', () => {
     location.reload();
 });
 
-document.querySelector('.item__preview-as').addEventListener('mouseup', () => {
+document.querySelector('.a__preview-as').addEventListener('mouseup', () => {
     navItemSub[0].classList.toggle('hidden');
 });
 
@@ -80,7 +80,7 @@ document.getElementById('styled-html-set').addEventListener('mouseup', () => {
     previewer.classList.remove('html-display');
 });
 
-document.querySelector('.item__settings').addEventListener('mouseup', () => {
+document.querySelector('.a__settings').addEventListener('mouseup', () => {
     navItemSub[1].classList.toggle('hidden');
 });
 
