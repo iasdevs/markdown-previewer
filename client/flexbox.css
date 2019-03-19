@@ -1,0 +1,9 @@
+.main__header, .main__div, .title, .nav__menu, .nav__item--sec {
+    display: flex;
+    background:  #6ab47b;
+}
+.main__section {
+    display: flex;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}

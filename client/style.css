@@ -1,5 +1,18 @@
-.nav__item--main li a {
-    cursor: pointer;
+
+/*===========================
+     --- Base Styles ---
+===========================*/
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Helvetica, Helvetica Neue, Arial;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .nav__item--sub, .display__count {
@@ -17,3 +30,77 @@
 .hidden {
     display: none;
 }
+
+/*===========================
+    --- Edit Section ---
+===========================*/
+
+.title {
+    padding-top: 1.4rem;
+}
+
+.main__div {
+    width: 95%;
+    margin: 0 auto;
+   justify-content: space-between;
+}
+.main__header {
+    align-content: space-between;
+    border-bottom: 20px solid #599a68;
+}
+.main__header {
+    color: #fff;
+}
+.main__footer {
+    background:  #6ab47b;
+}
+.nav__menu {
+    background: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li .a__preview-as, .a__settings {
+    padding: 10px;
+    border: 1px solid white;
+}
+/*===========================
+    --- Pseudo Element ---
+===========================*/
+
+a:hover, a:visited {
+    color: white;
+}
+
+.a__preview-as, .a__settings {
+    display: block;
+    margin: 1rem;
+}
+.a__preview-as, .a__settings {
+    padding-right: 4rem;
+    background: #599a68;
+    /* padding: 1rem; */
+}
+
+/*===========================
+      --- Clearfix ---
+===========================*/
+
+.cf::before,
+.cf::after {
+    content: " ";
+    display: table;
+}
+.cf::after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+
+/*===========================
+    --- Media Queries ---
+*************************/
