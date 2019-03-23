@@ -17,3 +17,101 @@
 .hidden {
     display: none;
 }
+
+/* ================================================
+            --- Edit Section  ---
+================================================ */
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: inherit;
+}
+.header__main, .header__title, .nav__menu, .nav__item--main_first {
+    display: flex;
+    justify-content: space-between;
+}
+.header__main {
+    height: 51px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header__title {
+    line-height: 42px;
+    margin-top: -3px;
+    padding: 0 4rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 105%;
+}
+.nav__item--main_first {
+    margin: .6rem 4rem 0 0;
+}
+.nav__item--main_first li {
+    margin: 0 2rem;
+}
+.header__main, .footer__main {
+    background-color: #373d49;
+}
+.header__title {
+    color: rgba(255, 255, 255, 0.911);
+}
+.nav__item--main_first {
+    color: rgba(255, 255, 255, 0.829);
+}
+
+/* ================================================
+            ---  Body  ---
+================================================ */
+
+.main__section {
+    margin-top: 4rem;
+    display: inline-flex;
+    min-height: calc(100vh - 54px);
+    height: 800px;
+    width: 40%;
+}
+
+.display__previewer {
+    width: 50%;
+    float: left;
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+}
+
+/* ================================================
+            ---  Footer  ---
+================================================ */
+
+.footer__main {
+    padding-bottom: 30px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+
+/* ================================================
+            ---  Base Section  ---
+================================================ */
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+div {
+    display: block;
+}
+
+
+/* ================================================
+            ---  Clear Fix  ---
+================================================ */
+
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
