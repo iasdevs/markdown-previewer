@@ -8,54 +8,58 @@
     <title>Markdown Previewer</title>
 </head>
 <body>
-    <header>
-        <h1>Markdown Previewer</h1>
-        <nav class="nav nav__menu">
-            <ul class="nav__item--main">
-                <li>
-                    <a class="a__preview-as">Preview As</a>
-                    <ul class="nav__item--sub hidden">
-                        <li><a id="html-set">HTML</a></li>
-                        <li><a id="styled-html-set">Styled HTML</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="a__settings" >Settings</a>
-                    <ul class="nav__item--sub hidden">
-                        <li>Autosave <input id="autosave-set" type="checkbox" /></li>
-                        <li>Character Count <input id="character-count-set" type="checkbox" /></li>
-                        <li>Word Count <input id="word-count-set" type="checkbox" /></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <div class="display__count">
-            <p class="hidden">Character Count: <span id="character-count"></span></p>
-            <p class="hidden">Word Count: <span id="word-count"></span></p>
-        </div>
-        <div class="display__previewer">
-            <h3>Markdown</h3>
-            <textarea id="editor"></textarea>
-            <h3>Preview</h3>
-            <div class="html-display" id="previewer"></div>
-        </div>
-        <div class="display__buttons">
-            <button id="save-session">Save Session</button>
-            <button id="clear-session">Clear Session</button>
-        </div>        
-    </section>
+    <div class="container">
+        <header class="clearfix">
+            <a class="a__brand-name" href="#">Markdown Previewer</a>
+            <nav class="nav nav__menu">
+                <ul class="nav__item--main clearfix">
+                    <li>
+                        <a class="a__preview-as">Preview As</a>
+                        <ul class="nav__item--sub hidden">
+                            <li><a id="html-set">HTML</a></li>
+                            <li><a id="styled-html-set">Styled HTML</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="a__settings" >Settings</a>
+                        <ul class="nav__item--sub hidden">
+                            <li>
+                                <p>Autosave</p> 
+                                <input id="autosave-set" type="checkbox" />
+                            </li>
+                            <li>
+                                <p>Character Count</p> 
+                                <input id="character-count-set" type="checkbox" />
+                            </li>
+                            <li>
+                                <p>Word Count</p> 
+                                <input id="word-count-set" type="checkbox" />
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div class="display__count">
+                <p class="hidden">Character Count: <span id="character-count"></span></p>
+                <p class="hidden">Word Count: <span id="word-count"></span></p>
+            </div>
+            <div class="display__buttons">
+                <button id="save-session">Save Session</button>
+                <button id="clear-session">Clear Session</button>
+            </div>             
+            <div class="display__previewer">
+                <h3>Markdown</h3>
+                <textarea id="editor"></textarea>
+                <h3>Preview</h3>
+                <div class="html-display" id="previewer"></div>
+            </div>
+        </section>        
+    </div>
     <footer>
-        <nav class="nav nav__social">
-            <ul class="nav__item--main">
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Discord</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2019 - Created by <a href="https://github.com/iasdevs">IasDevs</a>   </p>
-    </footer>
+        <p>&copy; 2019 Created by <a target="_blank" href="https://github.com/jsCodeDevs">jsCodeDevs</a></p>
+    </footer>    
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="client/script.js"></script>
 </body>
