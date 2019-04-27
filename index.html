@@ -8,38 +8,38 @@
     <title>Markdown Previewer</title>
 </head>
 <body>
-    <div class="container">
-        <header class="clearfix">
+    <div class="wrapper">
+        <nav>
+            <div class="container clearfix">
             <a class="a__brand-name" href="#">Markdown Previewer</a>
-            <nav class="nav nav__menu">
-                <ul class="nav__item--main clearfix">
-                    <li>
-                        <a class="a__preview-as">Preview As</a>
-                        <ul class="nav__item--sub hidden">
-                            <li><a id="html-set">HTML</a></li>
-                            <li><a id="styled-html-set">Styled HTML</a></li>
-                        </ul>
+                <ul class="nav__menu">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" id="a__preview-as" class="dropdown-button">Preview As</a>
+                        <div id="dropdown-preview" class="dropdown-content hidden">
+                            <a id="html-set">HTML</a>
+                            <a id="styled-html-set">Styled HTML</a>
+                        </div>
                     </li>
-                    <li>
-                        <a class="a__settings" >Settings</a>
-                        <ul class="nav__item--sub hidden">
-                            <li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" id="a__settings" class="dropdown-button" >Settings</a>
+                        <div id="dropdown-settings" class="dropdown-content hidden">
+                            <div class="options clearfix">
                                 <p>Autosave</p> 
                                 <input id="autosave-set" type="checkbox" />
-                            </li>
-                            <li>
+                            </div>
+                            <div class="options clearfix">
                                 <p>Character Count</p> 
                                 <input id="character-count-set" type="checkbox" />
-                            </li>
-                            <li>
+                            </div>
+                            <div class="options clearfix">
                                 <p>Word Count</p> 
                                 <input id="word-count-set" type="checkbox" />
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </li>
                 </ul>
+            </div>
             </nav>
-        </header>
         <section>
             <div class="display__count">
                 <p class="hidden">Character Count: <span id="character-count"></span></p>
@@ -58,7 +58,7 @@
         </section>        
     </div>
     <footer>
-        <p>&copy; 2019 Created by <a target="_blank" href="https://github.com/jsCodeDevs">jsCodeDevs</a></p>
+        <p>&copy; 2019 Created by <a target="_blank" href="https://github.com/iasjem">iasjem</a></p>
     </footer>    
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="client/script.js"></script>

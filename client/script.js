@@ -66,8 +66,18 @@ document.getElementById('clear-session').addEventListener('mouseup', () => {
     location.reload();
 });
 
-document.querySelector('.a__preview-as').addEventListener('mouseup', () => {
-    navItemSub[0].classList.toggle('hidden');
+document.getElementById('a__preview-as').addEventListener('mouseup', () => {
+    document.getElementById('dropdown-settings').classList.add('hidden');
+    document.getElementById('a__settings').classList.remove('active');
+    document.getElementById('a__preview-as').classList.toggle('active');
+    document.getElementById('dropdown-preview').classList.toggle('hidden');
+});
+
+document.getElementById('a__settings').addEventListener('mouseup', () => {
+    document.getElementById('dropdown-preview').classList.add('hidden');
+    document.getElementById('a__preview-as').classList.remove('active');
+    document.getElementById('a__settings').classList.toggle('active');
+    document.getElementById('dropdown-settings').classList.toggle('hidden');
 });
 
 document.getElementById('html-set').addEventListener('mouseup', () => {
@@ -78,10 +88,6 @@ document.getElementById('html-set').addEventListener('mouseup', () => {
 document.getElementById('styled-html-set').addEventListener('mouseup', () => {
     previewer.classList.add('styled-html-display');
     previewer.classList.remove('html-display');
-});
-
-document.querySelector('.a__settings').addEventListener('mouseup', () => {
-    navItemSub[1].classList.toggle('hidden');
 });
 
 setAutosave.addEventListener('change', () => {
