@@ -46,6 +46,7 @@ footer {
 a { 
     text-decoration: none; 
     color: #a0aabf;
+    cursor: pointer;
 }
 
 a:hover { color: #35d7bb; }
@@ -121,15 +122,32 @@ li.dropdown { display: inline-block }
     cursor: pointer;
 }
 
-.nav__item--sub, .display__count {
-    display: block;
-}
-
 .nav__menu li {
     float: left;
     margin-left: 1rem;
 }
 
+.display__count {
+    display: block;
+    float: left;
+    padding: .5rem 0;
+    font-weight: 700;
+}
+
+.display__count span { font-weight: 400; }
+
+.display__buttons { float: right; }
+
+.btn {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #373d49;
+    color: #f0f0f0;
+}
+
+.btn:hover { color: #35d7bb; }
 
 /* HELPERS */
 
