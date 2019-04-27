@@ -80,7 +80,7 @@ li.dropdown { display: inline-block }
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-content a, .options a{
+.dropdown-content a, .options a {
     color: #000;
     padding: 12px 16px;
     text-decoration: none;
@@ -101,6 +101,10 @@ li.dropdown { display: inline-block }
     padding: 10px 15px;
 }
 
+input[type=checkbox] {
+    cursor: pointer;
+}
+
 .options p {
     float: left;
 }
@@ -118,10 +122,6 @@ li.dropdown { display: inline-block }
 .nav__menu {
     display: block;
     float: right;
-}
-
-.nav__menu li a {
-    cursor: pointer;
 }
 
 .nav__menu li {
@@ -167,6 +167,8 @@ textarea, .html-display {
     cursor: pointer;
     background-color: #373d49;
     color: #f0f0f0;
+    letter-spacing: 2px;
+    font-size: 18px;
 }
 
 .btn:hover { color: #35d7bb; }
@@ -180,17 +182,11 @@ textarea, .html-display {
     clear: both;
 }
 
-.active {
-    color: #35d7bb;
-}
+.active { color: #35d7bb; }
 
-.hidden {
-    display: none;
-}
+.hidden { display: none; }
 
-.html-display {
-    font-family: initial;
-}
+.html-display { font-family: initial; }
 
 .styled-html-display {
     font-family: Arial, Helvetica, sans-serif;
@@ -210,10 +206,44 @@ textarea, .html-display {
     html { font-size: 14px; }
     .container { width: 100%; }
     nav { padding: 1rem; }
-    .dropdown-content { right: 10px; }
+    .dropdown-content { 
+        top: 65px;
+        right: 10px; 
+    }
     .display__editor, .display__previewer {
         float: none;
         width: 100%;
         margin-bottom: 2rem;
     }
+}
+
+@media screen and (max-width: 480px) {
+    html { font-size: 14px; }
+    nav { padding: 1rem 0; }
+    nav, .display__count, .display__buttons { text-align: center; }
+    .nav__menu { 
+        display: table;
+        content: " ";
+        clear: both;
+        margin: 0 auto;
+        margin-top: .5rem; 
+    }
+    .a__brand-name, .nav__menu, .display__buttons, .display__count { float: none; }
+    .display__count { margin-bottom: 1rem; }
+    .dropdown-content {
+        top: 97px;
+        left: 25%;
+        right: 0;
+    }
+    .btn { 
+        width: 75%; 
+        margin-bottom: .5rem;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    html { font-size: 10px; }
+    .btn { font-size: 12px; }
+    .dropdown-content { top: 75px; }
 }

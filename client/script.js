@@ -5,7 +5,6 @@ const displayCharacterCount = document.getElementById('character-count');
 const setAutosave = document.getElementById('autosave-set');
 const setCharacterCount = document.getElementById('character-count-set');
 const setWordCount = document.getElementById('word-count-set');
-const navItemSub = document.querySelectorAll('.nav__item--sub');
 const displayCountItem = document.querySelectorAll('.display__count p');
 
 const view = (value) => {
