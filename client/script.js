@@ -1,11 +1,18 @@
 const editor = document.getElementById('editor');
 const previewer = document.getElementById('previewer');
+
 const displayWordCount = document.getElementById('word-count');
 const displayCharacterCount = document.getElementById('character-count');
+const displayCountItem = document.querySelectorAll('.display__count p');
+
 const setAutosave = document.getElementById('autosave-set');
 const setCharacterCount = document.getElementById('character-count-set');
 const setWordCount = document.getElementById('word-count-set');
-const displayCountItem = document.querySelectorAll('.display__count p');
+
+const aPreviewAs = document.getElementById('a__preview-as');
+const aSettings = document.getElementById('a__settings');
+const dropdownPreviewAs = document.getElementById('dropdown-preview');
+const dropdownSettings = document.getElementById('dropdown-settings');
 
 const view = (value) => {
     editor.innerHTML = value;
@@ -44,6 +51,20 @@ const loadSettings = () => {
     else displayCountItem[1].classList.remove('hidden');
 }
 
+aPreviewAs.addEventListener('mouseup', () => {
+    dropdownSettings.classList.add('hidden');
+    aSettings.classList.remove('active');
+    aPreviewAs.classList.toggle('active');
+    dropdownPreviewAs.classList.toggle('hidden');
+});
+
+aSettings.addEventListener('mouseup', () => {
+    dropdownPreviewAs.classList.add('hidden');
+    aPreviewAs.classList.remove('active');
+    aSettings.classList.toggle('active');
+    dropdownSettings.classList.toggle('hidden');
+});
+
 editor.addEventListener('input', () => {
     if (setAutosave.checked) {
         clearSession();
@@ -63,20 +84,6 @@ document.getElementById('save-session').addEventListener('mouseup', () => {
 document.getElementById('clear-session').addEventListener('mouseup', () => {
     clearSession();
     location.reload();
-});
-
-document.getElementById('a__preview-as').addEventListener('mouseup', () => {
-    document.getElementById('dropdown-settings').classList.add('hidden');
-    document.getElementById('a__settings').classList.remove('active');
-    document.getElementById('a__preview-as').classList.toggle('active');
-    document.getElementById('dropdown-preview').classList.toggle('hidden');
-});
-
-document.getElementById('a__settings').addEventListener('mouseup', () => {
-    document.getElementById('dropdown-preview').classList.add('hidden');
-    document.getElementById('a__preview-as').classList.remove('active');
-    document.getElementById('a__settings').classList.toggle('active');
-    document.getElementById('dropdown-settings').classList.toggle('hidden');
 });
 
 document.getElementById('html-set').addEventListener('mouseup', () => {
